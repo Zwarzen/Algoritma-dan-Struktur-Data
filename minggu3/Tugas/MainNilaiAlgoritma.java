@@ -14,26 +14,52 @@ public class MainNilaiAlgoritma {
         
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Mencari Nilai Akhir");
+        double r2 = 0;
         
-        System.out.print("Masukkan Nilai Tugas : ");
-        int NilaiTugas = sc.nextInt();
-        System.out.print("Masukkan Nilai Kuis : ");
-        int NilaiKuis = sc.nextInt();
-        System.out.print("Masukkan Nilai UTS : ");
-        int NilaiUts = sc.nextInt();
-        System.out.print("Masukkan Nilai UAS : ");
-        int NilaiUas = sc.nextInt();
+        System.out.println("==========================");
+        System.out.print("Masukkan banyak mahasiswa: ");
         
-        double a,b,c,d;
+        int mhs = sc.nextInt();
+        sc.nextLine();
         
-        a = NilaiTugas*0.3;
-        b = NilaiKuis*0.2;
-        c = NilaiUts*0.2;
-        d = NilaiUas*0.3;
+        System.out.println("");
+        System.out.println("==========================");
         
-        double nilaiAkhir = a+b+c+d;
+        NilaiAlgoritma[] nilai = new NilaiAlgoritma[mhs];
         
-        System.out.println("Nilai akhir anda adalah : " + nilaiAkhir);
-    }      
-}
+            for(int i = 0; i < nilai.length; i++){
+                System.out.println("Mahasiswa " + (i+1));
+                System.out.print("Masukkan nama mahasiswa: ");
+                String nm = sc.nextLine();
+                
+                System.out.print("Masukkan nilai tugas: ");
+                int nt = sc.nextInt();
+                
+                System.out.print("Masukkan nilai kuis: ");
+                int nk = sc.nextInt();
+                
+                
+                System.out.print("Masukkan nilai UTS: ");
+                int nuts = sc.nextInt();
+                
+                System.out.print("Masukkan nilai UAS: ");
+                int nuas = sc.nextInt();
+                sc.nextLine();
+                
+                System.out.println("==========================");
+                nilai[i] = new NilaiAlgoritma(nm, nt, nk, nuts, nuas);
+            }
+            
+            System.out.println("Nilai Total Mahasiswa");
+            
+            for(int i = 0; i < nilai.length; i++){
+                System.out.println("Nama: " + nilai[i].namaMhs);
+                System.out.println("Nilai Total: " + nilai[i].hitungTotalNilai());
+                System.out.println("-------------------------");
+                r2 += nilai[i].hitungTotalNilai();
+            }
+            System.out.println("Rata-rata nilai seluruh Mahasiswa: " + (r2/nilai.length));
+                
+        }
+                
+}      
