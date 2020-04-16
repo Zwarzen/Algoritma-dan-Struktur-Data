@@ -27,7 +27,7 @@ public class ModMainLinkedList {
             data.removeByValue(4);
             data.print();
             data.clear();
-            int pilih = 0, pilih1, nilai, index;
+            int pilih, pilih1, nilai, index;
             do {
                 System.out.println("\nMenu");
                 System.out.println("1. Tambah");
