@@ -30,6 +30,8 @@ Absen : 25
 <img src="addLast.PNG">
 6. AddFirst
 <img src="addFirst.PNG">
+7. Print
+<img src="printF.PNG">
 
 # Penjelasan
 
