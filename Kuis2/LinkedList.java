@@ -10,20 +10,20 @@ package kuis2;
  * @author R154NG
  */
 public class LinkedList {
-    y2018 head18;
-    y2019 head19;
-    y2020 head20;
+    y2018 h18;
+    y2019 h19;
+    y2020 h20;
     int size;
 
     public LinkedList() {
-        head18 = null;
-        head19 = null;
-        head20 = null;
+        h18 = null;
+        h19 = null;
+        h20 = null;
         size = 0;
     }
 
     public boolean isEmpty() {
-        return head18 == null && head19 == null && head20 == null;
+        return h18 == null && h19 == null && h20 == null;
     }
     
     public void add(int item1, int item2, int item3, int bln) throws Exception {
@@ -37,9 +37,9 @@ public class LinkedList {
         if (isEmpty() || bulan == 0) {
             addFirst(item1, item2, item3);
         } else {
-            y2018 tmp1 = head18;
-            y2019 tmp2 = head19;
-            y2020 tmp3 = head20;
+            y2018 tmp1 = h18;
+            y2019 tmp2 = h19;
+            y2020 tmp3 = h20;
             
             for (int i = 1; i < bulan; i++) {
                 tmp1 = tmp1.next;
@@ -59,9 +59,9 @@ public class LinkedList {
     }
     
     public void addFirst(int item1, int item2, int item3) {
-        head18 = new y2018(item1, head18);
-        head19 = new y2019(item2, head19);
-        head20 = new y2020(item3, head20);
+        h18 = new y2018(item1, h18);
+        h19 = new y2019(item2, h19);
+        h20 = new y2020(item3, h20);
         size++;
     }
 
@@ -70,9 +70,9 @@ public class LinkedList {
         if (isEmpty()) {
             addFirst(item1, item2, item3);
         } else {
-            y2018 tmp1 = head18;
-            y2019 tmp2 = head19;
-            y2020 tmp3 = head20;
+            y2018 tmp1 = h18;
+            y2019 tmp2 = h19;
+            y2020 tmp3 = h20;
             
             while (tmp1.next != null) {
                 tmp1 = tmp1.next;
@@ -95,9 +95,9 @@ public class LinkedList {
             throw new Exception("Bulan tidak terdaftar");
         }
         
-        y2018 tmp1 = head18;
-        y2019 tmp2 = head19;
-        y2020 tmp3 = head20;
+        y2018 tmp1 = h18;
+        y2019 tmp2 = h19;
+        y2020 tmp3 = h20;
         
         for (int i = 0; i < bulan; i++) {
             tmp1 = tmp1.next;
@@ -113,7 +113,7 @@ public class LinkedList {
             throw new Exception("linked list tidak ada");
         }
         System.out.println("Bulan ke- 2018\t2019\t2020");
-        System.out.println("1" + "\t" + head18.data + " " + head19.data + " " + head20.data);
+        System.out.println("1" + "\t" + h18.data + " " + h19.data + " " + h20.data);
     }
 
     public void getLast() throws Exception {
@@ -121,9 +121,9 @@ public class LinkedList {
             throw new Exception("linked list tidak ada");
         }
         
-        y2018 tmp1 = head18;
-        y2019 tmp2 = head19;
-        y2020 tmp3 = head20;
+        y2018 tmp1 = h18;
+        y2019 tmp2 = h19;
+        y2020 tmp3 = h20;
         
         int bulan = 1;
         
@@ -140,18 +140,18 @@ public class LinkedList {
     }
 
     public void clear() {
-        head18 = null;
-        head19 = null;
-        head20 = null;
+        h18 = null;
+        h19 = null;
+        h20 = null;
         size = 0;
     }
 
     public void print() {
         
         if (!isEmpty()) {
-            y2018 tmp1 = head18;
-            y2019 tmp2 = head19;
-            y2020 tmp3 = head20;
+            y2018 tmp1 = h18;
+            y2019 tmp2 = h19;
+            y2020 tmp3 = h20;
             
             int bulan = 1;
             System.out.println("Bulan ke- 2018 \t 2019 \t 2020");
